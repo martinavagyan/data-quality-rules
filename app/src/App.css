@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.App .query-panel {
+  background-color: black;
+  color: white;
+  weight: bold;
+}
