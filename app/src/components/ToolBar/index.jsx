@@ -28,16 +28,16 @@ const tableData = {
   columns: 
   [
     {
-      "column": "gridId",
-      "data_type": "number",
+      "name": "gridId",
+      "type": "number",
     },
     {
-      "column": "name",
-      "data_type": "string",
+      "name": "name",
+      "type": "string",
     },
     {
-      "isClient": "id",
-      "data_type": "number",
+      "name": "isClient",
+      "type": "bool",
     },
   ]
 }
@@ -46,7 +46,7 @@ const ToolBar = ({onTableSelected}) => {
   const [table, setTable] = useState({});
   return (
     <Wrapper>
-      <Button onClick={() => {setTable(tableData); onTableSelected(tableData)}}>Upload new</Button>
+      <Button onClick={() => {setTable(tableData); onTableSelected(tableData)}}>Upload</Button>
       <span>
         <b>
           {table.name || 'No table selected'}

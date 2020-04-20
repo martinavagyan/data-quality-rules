@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import styled from 'styled-components';
 
-const TableExplorer = ({table =[]}) => {
+const Columns = styled.ul`
+  list-style-type:none;
+`
+
+const TableExplorer = ({table ={}}) => {
+  console.log(table);
   return (
-    <ul>
-      {table.map(item => <li><b>item.column: </b>item.type</li>)}
-    </ul>
+    <Fragment>
+      {table.columns && 
+        <Columns>
+          {table.columns.map(column => <li><b>{column.name}: </b>{column.type}</li>)}
+        </Columns>
+      }
+    </Fragment>
   );
 };
 
