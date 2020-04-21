@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 
+import { useToasts} from 'react-toast-notifications'
+
 const Wrapper = styled.div`
   height: 60px;
   border-radius: 8px;
@@ -59,10 +61,22 @@ const Logo = styled.div`
 
 const initialState = {columns: []};
 const ToolBar = ({onTableSelected}) => {
+  const { addToast } = useToasts()
   const [table, setTable] = useState({...initialState});
+
+  const onUpload = () => {
+    onTableSelected(tableData);
+    setTable(tableData);
+    addToast('Succesfully uploaded', {
+      appearance: 'success',
+      autoDismiss: true,
+      autoDismissTimeout: 3000,
+    })
+  };
+
   return (
     <Wrapper>
-      <Button onClick={() => {setTable(tableData); onTableSelected(tableData)}}>Upload</Button>
+      <Button onClick={onUpload}>Upload</Button>
       <span>
         <b>
           {table.name || 'No table selected'}

@@ -4,6 +4,7 @@ import QueryBuilder from 'react-querybuilder';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {github} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Select from 'react-select';
+import {useToasts} from 'react-toast-notifications'
  
 const template = state => ({
   "source_table": {
@@ -181,6 +182,7 @@ const handleQueryChange = (targetColumn, input, currentQueries, setQuery) => {
 const RoleEditor = ({table = {columns: []}}) => {
   const [queries, setQuery] = useState([]);
   const [parentOf, setParentOf] = useState([]);
+  const { addToast } = useToasts()
 
   const [completnessOperator, setCompletnessOperator] = useState('');
   const [completnessValue, setCompletnessValue] = useState('');
@@ -207,6 +209,15 @@ const RoleEditor = ({table = {columns: []}}) => {
       parent_children_constraints: parentOf,
     }
   );
+
+  const onSubmit = () => {
+    fetch('/api/validate', {body: JSON.stringify(body, null, 2), method: 'POST'});
+    addToast('Succesfully submited', {
+      appearance: 'success',
+      autoDismiss: true,
+      autoDismissTimeout: 3000,
+    });
+  };
 
   return (
     <Fragment>
@@ -278,7 +289,7 @@ const RoleEditor = ({table = {columns: []}}) => {
           </Output>
         </Wrapper>
       }
-      {table.columns.length != 0 && <Button onClick={() => fetch('/api/validate', {body: JSON.stringify(body, null, 2), method: 'POST'})}>Submit</Button>}
+      {table.columns.length != 0 && <Button onClick={onSubmit}>Submit</Button>}
     </Fragment>
   );
 };
