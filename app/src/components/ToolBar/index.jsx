@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
+import logo from '../../assets/logo.png';
 
 const Wrapper = styled.div`
   height: 60px;
@@ -14,10 +15,11 @@ const Wrapper = styled.div`
 
 const Button = styled.button`
   height: 30px;
-  background: #1890ff;
+  width: 100px;
+  background: ${props => props.type === 'secondary' ? 'white': '#1890ff'};
+  color: ${props => props.type === 'secondary' ?'#1890ff' : 'white'};
   border-radius: 4px;
-  border: none;
-  color: white;
+  border: 1px solid #1890ff;
   line-height: 1.5;
   font-weight: bold;
   cursor: pointer;
@@ -42,8 +44,22 @@ const tableData = {
   ]
 }
 
+const Image = styled.img`
+  width: 60px;
+`;
+
+const Logo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  font-weight: bold;
+  color: darkblue;
+`;
+
+const initialState = {columns: []};
 const ToolBar = ({onTableSelected}) => {
-  const [table, setTable] = useState({});
+  const [table, setTable] = useState({...initialState});
   return (
     <Wrapper>
       <Button onClick={() => {setTable(tableData); onTableSelected(tableData)}}>Upload</Button>
@@ -52,7 +68,7 @@ const ToolBar = ({onTableSelected}) => {
           {table.name || 'No table selected'}
         </b>
       </span>
-      <Button>Submit</Button>
+      <Logo>Validata <Image src={logo}/></Logo>
     </Wrapper>
   );
 };

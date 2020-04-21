@@ -10,6 +10,7 @@
     "react-dom": "^16.13.1",
     "react-querybuilder": "^3.1.2",
     "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
     "react-syntax-highlighter": "^12.2.1",
     "styled-components": "^5.1.0"
   },
