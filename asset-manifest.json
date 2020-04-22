@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e896e56.chunk.css",
-    "main.js": "/static/js/main.3be89279.chunk.js",
-    "main.js.map": "/static/js/main.3be89279.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6d8ceafa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6d8ceafa.js.map",
-    "static/js/2.a98c5879.chunk.js": "/static/js/2.a98c5879.chunk.js",
-    "static/js/2.a98c5879.chunk.js.map": "/static/js/2.a98c5879.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.af7a731aa37dd10a7cb83faab7acf8bd.js": "/precache-manifest.af7a731aa37dd10a7cb83faab7acf8bd.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.8e896e56.chunk.css.map": "/static/css/main.8e896e56.chunk.css.map",
-    "static/js/2.a98c5879.chunk.js.LICENSE.txt": "/static/js/2.a98c5879.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/static/media/logo.50e8e5ec.png"
+    "main.css": "/data-quality-rules/static/css/main.8e896e56.chunk.css",
+    "main.js": "/data-quality-rules/static/js/main.5acf4ff1.chunk.js",
+    "main.js.map": "/data-quality-rules/static/js/main.5acf4ff1.chunk.js.map",
+    "runtime-main.js": "/data-quality-rules/static/js/runtime-main.b8c310e4.js",
+    "runtime-main.js.map": "/data-quality-rules/static/js/runtime-main.b8c310e4.js.map",
+    "static/js/2.52a67816.chunk.js": "/data-quality-rules/static/js/2.52a67816.chunk.js",
+    "static/js/2.52a67816.chunk.js.map": "/data-quality-rules/static/js/2.52a67816.chunk.js.map",
+    "index.html": "/data-quality-rules/index.html",
+    "precache-manifest.13eaab01d7ad7ea10b87722e0c33a8df.js": "/data-quality-rules/precache-manifest.13eaab01d7ad7ea10b87722e0c33a8df.js",
+    "service-worker.js": "/data-quality-rules/service-worker.js",
+    "static/css/main.8e896e56.chunk.css.map": "/data-quality-rules/static/css/main.8e896e56.chunk.css.map",
+    "static/js/2.52a67816.chunk.js.LICENSE.txt": "/data-quality-rules/static/js/2.52a67816.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/data-quality-rules/static/media/logo.50e8e5ec.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d8ceafa.js",
-    "static/js/2.a98c5879.chunk.js",
+    "static/js/runtime-main.b8c310e4.js",
+    "static/js/2.52a67816.chunk.js",
     "static/css/main.8e896e56.chunk.css",
-    "static/js/main.3be89279.chunk.js"
+    "static/js/main.5acf4ff1.chunk.js"
   ]
 }
